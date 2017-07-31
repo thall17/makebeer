@@ -5,7 +5,8 @@ class RecipesController < ApplicationController
   # GET /recipes
   # GET /recipes.json
   def index
-    @recipes = Recipe.all
+    @my_recipes = current_user.recipes.all if current_user
+    @public_recipes = Recipe.all.where(public: true)
   end
 
   # GET /recipes/1
@@ -71,6 +72,6 @@ class RecipesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def recipe_params
-      params.require(:recipe).permit(:name, :fermenter, :desired_og, :measured_og, :visibility, :brew_type, :batch_size, :boil_time, :date, :version, :measured_fg, :abv, :status, :ibu, :color, :container)
+      params.require(:recipe).permit(:name, :fermenter, :desired_og, :measured_og, :is_public, :brew_type, :batch_size, :boil_time, :date, :version, :measured_fg, :abv, :status, :ibu, :color, :container)
     end
 end

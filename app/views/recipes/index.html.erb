@@ -9,7 +9,7 @@
       <th>Fermenter</th>
       <th>Desired og</th>
       <th>Measured og</th>
-      <th>Visibility</th>
+      <th>Public?</th>
       <th>Type</th>
       <th>Batch size</th>
       <th>Boil time</th>
@@ -26,13 +26,13 @@
   </thead>
 
   <tbody>
-    <% @recipes.each do |recipe| %>
+    <% @my_recipes.each do |recipe| %>
       <tr>
         <td><%= recipe.name %></td>
         <td><%= recipe.fermenter %></td>
         <td><%= recipe.desired_og %></td>
         <td><%= recipe.measured_og %></td>
-        <td><%= recipe.visibility %></td>
+        <td><%= recipe.is_public %></td>
         <td><%= recipe.brew_type %></td>
         <td><%= recipe.batch_size %></td>
         <td><%= recipe.boil_time %></td>

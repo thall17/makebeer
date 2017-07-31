@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170731233026) do
+ActiveRecord::Schema.define(version: 20170731233944) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 20170731233026) do
     t.string "fermenter"
     t.decimal "desired_og"
     t.decimal "measured_og"
-    t.string "visibility"
     t.string "brew_type"
     t.decimal "batch_size"
     t.integer "boil_time"
@@ -36,6 +35,7 @@ ActiveRecord::Schema.define(version: 20170731233026) do
     t.datetime "updated_at", null: false
     t.bigint "user_id"
     t.decimal "rating"
+    t.boolean "is_public"
     t.index ["user_id"], name: "index_recipes_on_user_id"
   end
 
