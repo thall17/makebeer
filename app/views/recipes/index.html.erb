@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Recipes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Fermenter</th>
+      <th>Desired og</th>
+      <th>Measured og</th>
+      <th>Visibility</th>
+      <th>Type</th>
+      <th>Batch size</th>
+      <th>Boil time</th>
+      <th>Date</th>
+      <th>Version</th>
+      <th>Measured fg</th>
+      <th>Abv</th>
+      <th>Status</th>
+      <th>Ibu</th>
+      <th>Color</th>
+      <th>Container</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @recipes.each do |recipe| %>
+      <tr>
+        <td><%= recipe.name %></td>
+        <td><%= recipe.fermenter %></td>
+        <td><%= recipe.desired_og %></td>
+        <td><%= recipe.measured_og %></td>
+        <td><%= recipe.visibility %></td>
+        <td><%= recipe.type %></td>
+        <td><%= recipe.batch_size %></td>
+        <td><%= recipe.boil_time %></td>
+        <td><%= recipe.date %></td>
+        <td><%= recipe.version %></td>
+        <td><%= recipe.measured_fg %></td>
+        <td><%= recipe.abv %></td>
+        <td><%= recipe.status %></td>
+        <td><%= recipe.ibu %></td>
+        <td><%= recipe.color %></td>
+        <td><%= recipe.container %></td>
+        <td><%= link_to 'Show', recipe %></td>
+        <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
+        <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Recipe', new_recipe_path %>

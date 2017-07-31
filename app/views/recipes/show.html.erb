@@ -1,0 +1,84 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @recipe.name %>
+</p>
+
+<p>
+  <strong>Fermenter:</strong>
+  <%= @recipe.fermenter %>
+</p>
+
+<p>
+  <strong>Desired og:</strong>
+  <%= @recipe.desired_og %>
+</p>
+
+<p>
+  <strong>Measured og:</strong>
+  <%= @recipe.measured_og %>
+</p>
+
+<p>
+  <strong>Visibility:</strong>
+  <%= @recipe.visibility %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @recipe.type %>
+</p>
+
+<p>
+  <strong>Batch size:</strong>
+  <%= @recipe.batch_size %>
+</p>
+
+<p>
+  <strong>Boil time:</strong>
+  <%= @recipe.boil_time %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @recipe.date %>
+</p>
+
+<p>
+  <strong>Version:</strong>
+  <%= @recipe.version %>
+</p>
+
+<p>
+  <strong>Measured fg:</strong>
+  <%= @recipe.measured_fg %>
+</p>
+
+<p>
+  <strong>Abv:</strong>
+  <%= @recipe.abv %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @recipe.status %>
+</p>
+
+<p>
+  <strong>Ibu:</strong>
+  <%= @recipe.ibu %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @recipe.color %>
+</p>
+
+<p>
+  <strong>Container:</strong>
+  <%= @recipe.container %>
+</p>
+
+<%= link_to 'Edit', edit_recipe_path(@recipe) %> |
+<%= link_to 'Back', recipes_path %>

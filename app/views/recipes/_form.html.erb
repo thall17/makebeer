@@ -1,0 +1,97 @@
+<%= form_with(model: recipe, local: true) do |form| %>
+  <% if recipe.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
+
+      <ul>
+      <% recipe.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :recipe_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fermenter %>
+    <%= form.text_field :fermenter, id: :recipe_fermenter %>
+  </div>
+
+  <div class="field">
+    <%= form.label :desired_og %>
+    <%= form.text_field :desired_og, id: :recipe_desired_og %>
+  </div>
+
+  <div class="field">
+    <%= form.label :measured_og %>
+    <%= form.text_field :measured_og, id: :recipe_measured_og %>
+  </div>
+
+  <div class="field">
+    <%= form.label :visibility %>
+    <%= form.text_field :visibility, id: :recipe_visibility %>
+  </div>
+
+  <div class="field">
+    <%= form.label :type %>
+    <%= form.text_field :type, id: :recipe_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :batch_size %>
+    <%= form.text_field :batch_size, id: :recipe_batch_size %>
+  </div>
+
+  <div class="field">
+    <%= form.label :boil_time %>
+    <%= form.number_field :boil_time, id: :recipe_boil_time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date, id: :recipe_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :version %>
+    <%= form.text_field :version, id: :recipe_version %>
+  </div>
+
+  <div class="field">
+    <%= form.label :measured_fg %>
+    <%= form.text_field :measured_fg, id: :recipe_measured_fg %>
+  </div>
+
+  <div class="field">
+    <%= form.label :abv %>
+    <%= form.text_field :abv, id: :recipe_abv %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status, id: :recipe_status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ibu %>
+    <%= form.number_field :ibu, id: :recipe_ibu %>
+  </div>
+
+  <div class="field">
+    <%= form.label :color %>
+    <%= form.text_field :color, id: :recipe_color %>
+  </div>
+
+  <div class="field">
+    <%= form.label :container %>
+    <%= form.text_field :container, id: :recipe_container %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
