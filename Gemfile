@@ -45,7 +45,7 @@ group :development, :test do
 
   # Test frameworks for Rails
   gem 'rspec-rails', '~> 3.5'
-  gem 'factory_girl'
+  gem "factory_girl_rails", "~> 4.0"
 
 
 end
