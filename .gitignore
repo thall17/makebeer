@@ -20,3 +20,6 @@
 
 vendor/bundle
 .env
+
+# Ignore ERD diagram
+erd.pdf

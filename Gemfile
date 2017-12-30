@@ -33,6 +33,9 @@ gem 'jbuilder', '~> 2.5'
 # Devise gem for authentication
 gem 'devise'
 
+# ERD
+gem 'rails-erd', require: false, group: :development
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
